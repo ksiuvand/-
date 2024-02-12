@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    android:id="@+id/filmListCard"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left"
+                android:background="@drawable/ic_baseline_search_24"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <ImageView
+                    android:id="@+id/poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_search_24"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0.9"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_gravity="center">
+
+
+            <TextView
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:drawablePadding="10dp"
+                android:id="@+id/film_name"/>
+
+            <TextView
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/year"
+                android:text="year"
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:labelVisibilityMode="unlabeled">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="4.0dip"
+            android:paddingTop="5.0dip"
+            android:paddingRight="4.0dip"
+            android:paddingBottom="1.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/popular_btn"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:text="Популярное"
+                android:layout_weight="1.0"
+                android:background="@drawable/custom_btn"/>
+
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/marks_btn"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:text="Избранное"
+                android:layout_weight="1.0"
+                android:background="@drawable/custom_btn2"/>
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
