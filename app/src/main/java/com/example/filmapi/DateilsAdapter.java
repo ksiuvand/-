@@ -75,6 +75,7 @@ public class DateilsAdapter extends RecyclerView.Adapter<DateilsAdapter.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            id = film.getKinopoiskId();
             toMarks = itemView.findViewById(R.id.toMarks);
             SharedPreferences uri = itemView.getContext().getSharedPreferences(PATH_MARKS_LOCATION, Context.MODE_PRIVATE);
             int size = uri.getInt("marksSize", 0);
@@ -93,9 +94,11 @@ public class DateilsAdapter extends RecyclerView.Adapter<DateilsAdapter.ViewHold
                 public void onClick(View view) {
                     SharedPreferences uri = itemView.getContext().getSharedPreferences(PATH_MARKS_LOCATION, Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = uri.edit();
+                    id = film.getKinopoiskId();
                     if (flag){
                         toMarks.setImageResource(R.drawable.bookmarknew3);
                         flag = false;
+                        System.out.println(id+"sDTH");
                         marksM.add(String.valueOf(id));
                         editor.putInt("marksSize", uri.getInt("marksSize", 0)+1);
                         for(int i=0; i < marksM.size(); i++)
@@ -123,6 +126,8 @@ public class DateilsAdapter extends RecyclerView.Adapter<DateilsAdapter.ViewHold
                 @Override
                 public void onClick(View v) {
                     System.out.println("SDFDFXSA");
+                    SharedPreferences uri = v.getContext().getSharedPreferences(PATH_MARKS_LOCATION, Context.MODE_PRIVATE);
+
                     Intent first_intent = new Intent(v.getContext(), MainActivity.class);
                     v.getContext().startActivity(first_intent);
                 }

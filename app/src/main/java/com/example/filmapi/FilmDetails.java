@@ -52,8 +52,6 @@ public class FilmDetails extends AppCompatActivity {
         recycler = findViewById(R.id.recycleDet);
         int id = getIntent().getIntExtra("id", 0);
 
-
-
         apiInterface = RequestBuilder.buildRequest().create(FilmInterface.class);
 
         Log.i("WTF", String.valueOf(id));
